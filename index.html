@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodoku</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Ultra&display=swap" rel="stylesheet">    
+    
+    <link id="mainSize" href="css/defaltMod/main.css" type="text/css" rel="stylesheet">
+    <link id="gameSize" href="css/defaltMod/game.css" type="text/css" rel="stylesheet">
+    <link id="mainStyle" href="css/lightMod/mainLight.css" type="text/css" rel="stylesheet">
+    <link id="gameStyle" href="css/lightMod/gameLight.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <img src="woodoku_Icon.png">
+        <div id="title">Woodoku</div>
+        <div id="theme" class="themeNotChecked">
+            <div id="themeIcon"></div>
+        </div>
+    </header>
+
+    <main class="center">
+
+        <div id="mainState" class="center">
+            <div id="scoreBox">
+                <p>Best Score</p>
+                <p id="bestScore">0</p>
+            </div>
+            <div id="startButton" class="center button">Start</div>
+        </div>
+
+        <div id="gameState" class="center" style="display: none;">
+            <div>
+                <h1 id="score">0</h1>
+
+                <table id="woodoku"></table>
+            </div>
+            <table id="blockBox">
+                <tr>
+                    <td><div id="blockBox-0" class="blockCenter"><div class="clickBox"></div></div></td>
+                    <td><div id="blockBox-1" class="blockCenter"><div class="clickBox"></div></div></td>
+                    <td><div id="blockBox-2" class="blockCenter"><div class="clickBox"></div></div></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="gameOverState" class="center" style="display: none;">
+            <div id="gameOverScoreBox">
+                <p>score</p>
+                <p id="gameOverScore">0</p>
+                <p id="gameOverBestScore">Best Score: 0</p>
+                <div id="againButton" class="button">Again</div>
+                <div id="mainButton" class="button">Main</div>
+            </div>
+    </main>
+
+    <footer>
+        <p style="color: gray;">made by Ob_Corn</p>
+    </footer>
+
+    <script src="js/infos.js"></script>
+    <script src="js/game/blockInfo.js"></script>
+    <script src="js/game/gameSystem.js"></script>
+    <script src="js/game/blockPickSystem.js"></script>
+    <script src="js/game/gameOverSystem.js"></script>
+    <script src="js/mainState.js"></script>
+</body>
+</html>

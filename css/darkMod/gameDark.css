@@ -1,0 +1,38 @@
+#woodoku {
+    border-color: white;
+}
+
+.otherBaseColorTile {
+    background-color: rgb(172, 107, 118);
+}
+
+.findBlock {
+    background-color: rgba(255, 241, 216, 0.36);
+}
+
+.inTd {
+    border-color: rgb(83, 83, 83);
+    border-style: solid;
+}
+
+.fill {
+    background-color: rgb(228, 87, 111);
+    border-color: rgb(83, 83, 83);
+    border-style: solid;
+}
+
+.removeTile {
+    background-color: rgb(109, 18, 33);
+}
+
+.notFillAble{
+    background-color: rgb(72, 34, 40);
+}
+
+#gameOverState {
+    background-color: rgba(84, 2, 2, 0.33);
+}
+
+#mainButton {
+    background-color: white;
+}

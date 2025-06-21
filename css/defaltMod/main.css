@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button {
+    height: 70px;
+    width: 300px;
+    font-size: 60px;
+    border-radius: 15px;
+    border-width: 3px;
+}
+
+#theme {
+    margin: 10px;
+    position: absolute;
+    right: 0px;
+    display: inline-flex;
+    width: 80px;
+    height: 40px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50% / 100%;
+    transition: 0.3s;
+}
+
+.themeNotChecked {
+    background-color: white;
+}
+
+.themeChecked {
+    background-color: black;
+}
+
+#themeIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: orange;
+    transition: 0.3s;
+}
+
+header > img, header > div {
+    display: inline;
+    margin-left: 5px;
+}
+
+img {
+    width: 40px;
+}
+
+#title {
+    font-size: 50px;
+}
+
+header {
+    height: 10%;
+}
+
+main {
+    position: relative;
+    height: 85%;
+}
+
+footer {
+    height: 5%;
+}
+
+#mainState {
+    flex-direction: column;
+}
+
+#scoreBox {
+    font-size: 60px;
+}

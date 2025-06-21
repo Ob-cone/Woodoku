@@ -1,0 +1,14 @@
+.button {
+    color: rgb(130, 54, 80);
+    background-color: pink;
+    border-color: palevioletred;
+    border-style: solid;
+}
+
+body {
+    background-color: white;
+}
+
+#theme {
+    border-color: black;
+}
