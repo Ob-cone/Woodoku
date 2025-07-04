@@ -6,6 +6,7 @@ function gameOver(){
     bestScoreTag.innerText = `Best Score: ${bestScore}`;
     let gameOverScoreTag = document.getElementById("gameOverScore");
     gameOverScoreTag.innerText = score;
+    cancelAnimationFrame(timeLoop);
 }
 
 let againButton = document.getElementById("againButton");
@@ -21,7 +22,7 @@ againButton.onmouseout = function() {
 againButton.onclick = function() {
     let mainState = document.getElementById("gameOverState");
     mainState.style.display = "none";
-
+    sec = 3*60;
     setUpGame();
 }
 
@@ -44,4 +45,25 @@ mainButton.onclick = function() {
 
     let gameOverState = document.getElementById("gameOverState");
     gameOverState.style.display = "none";
+
+    sec = 3*60;
+}
+
+let nowTime = new Date();
+let sec = 3*60;
+let time = document.getElementById("time");
+let timeLoop;
+
+function timer(){
+    timeLoop = requestAnimationFrame(timer)
+    let endTime = new Date();
+    sec -= (endTime - nowTime)/1000.0;
+    nowTime = new Date();
+    let min = (sec - sec%60)/60;
+    let secc =  (sec - sec%1)%60;
+    time.innerText = `${min}:${secc}`;
+    if(sec < 0){
+        gameOver();
+        cancelAnimationFrame(timeLoop);
+    }
 }

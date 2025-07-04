@@ -8,16 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Ultra&display=swap" rel="stylesheet">    
-    
-    <link id="mainSize" href="css/defaltMod/main.css" type="text/css" rel="stylesheet">
-    <link id="gameSize" href="css/defaltMod/game.css" type="text/css" rel="stylesheet">
+
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link id="mainSize" href="css/defaultMod/main.css" type="text/css" rel="stylesheet">
+    <link id="gameSize" href="css/defaultMod/game.css" type="text/css" rel="stylesheet">
     <link id="mainStyle" href="css/lightMod/mainLight.css" type="text/css" rel="stylesheet">
     <link id="gameStyle" href="css/lightMod/gameLight.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
     <header>
-        <img src="woodoku_Icon.png">
+        <img src="woodoku_Icon.png" alt="woodoku_Icon">
         <div id="title">Woodoku</div>
         <div id="theme" class="themeNotChecked">
             <div id="themeIcon"></div>
@@ -27,6 +28,11 @@
     <main class="center">
 
         <div id="mainState" class="center">
+            <div id="ModBox">
+                <h2 id="leftMod"><</h2>
+                <h2 id="mod">Default</h2>
+                <h2 id="rightMod">></h2>
+            </div>
             <div id="scoreBox">
                 <p>Best Score</p>
                 <p id="bestScore">0</p>
@@ -36,6 +42,7 @@
 
         <div id="gameState" class="center" style="display: none;">
             <div>
+                <h1 id="time" style="display: none">00:00</h1>
                 <h1 id="score">0</h1>
 
                 <table id="woodoku"></table>
@@ -57,6 +64,7 @@
                 <div id="againButton" class="button">Again</div>
                 <div id="mainButton" class="button">Main</div>
             </div>
+        </div>
     </main>
 
     <footer>
@@ -64,6 +72,7 @@
     </footer>
 
     <script src="js/infos.js"></script>
+    <script src="js/modChange.js"></script>
     <script src="js/game/blockInfo.js"></script>
     <script src="js/game/gameSystem.js"></script>
     <script src="js/game/blockPickSystem.js"></script>

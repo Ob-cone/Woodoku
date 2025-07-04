@@ -29,6 +29,11 @@ function setUpGame(){
     updateScore();
     setBlocks();
     resetTileMap();
+
+    if(nowMod === 1){
+        nowTime = new Date();
+        timer();
+    }
 }
 
 function updateScore(){

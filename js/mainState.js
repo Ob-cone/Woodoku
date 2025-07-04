@@ -51,8 +51,8 @@ function changeSize(){
         gameSizeStyle.href = "css/smallMod/game.css";
     }
     else{
-        mainSizeStyle.href = "css/defaltMod/main.css";
-        gameSizeStyle.href = "css/defaltMod/game.css";
+        mainSizeStyle.href = "css/defaultMod/main.css";
+        gameSizeStyle.href = "css/defaultMod/game.css";
     }
 }
 
