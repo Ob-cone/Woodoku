@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Ultra&display=swap" rel="stylesheet">
+
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link id="mainSize" href="css/defaultMod/main.css" type="text/css" rel="stylesheet">
+    <link id="gameSize" href="css/defaultMod/game.css" type="text/css" rel="stylesheet">
+    <link id="mainStyle" href="css/lightMod/mainLight.css" type="text/css" rel="stylesheet">
+    <link id="gameStyle" href="css/lightMod/gameLight.css" type="text/css" rel="stylesheet">
+    <link href="css/share.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="woodoku_Icon.png" alt="woodoku_Icon">
+        <div id="title">Woodoku</div>
+        <div id="theme" class="themeNotChecked">
+            <div id="themeIcon"></div>
+        </div>
+    </header>
+    <main>
+        <div class="center" style="flex-direction: column; height: 100%">
+            <h1 id="time"></h1>
+            <h1 id="scoreTitle"></h1>
+            <table id="woodoku"></table>
+            <div id="blocks"></div>
+        </div>
+    </main>
+    <footer>
+        <p style="color: gray;">made by Ob_Corn</p>
+    </footer>
+    <script src="js/game/blockInfo.js"></script>
+    <script src="js/share.js"></script>
+</body>
+</html>

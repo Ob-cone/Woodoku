@@ -1,3 +1,8 @@
 #ModBox h2{
     display: inline;
 }
+
+#share {
+    border-radius: 50%;
+}
+

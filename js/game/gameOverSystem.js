@@ -7,6 +7,7 @@ function gameOver(){
     let gameOverScoreTag = document.getElementById("gameOverScore");
     gameOverScoreTag.innerText = score;
     cancelAnimationFrame(timeLoop);
+    link = getShareLink();
 }
 
 let againButton = document.getElementById("againButton");

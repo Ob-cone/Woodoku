@@ -52,6 +52,7 @@ function setBlock(index,num){
     let clickBox = blockBoxList[num].querySelector(".clickBox");
 
     block.className = "block";
+    block.blockIndex = index;
     clickBox.appendChild(block);
 
     //down event

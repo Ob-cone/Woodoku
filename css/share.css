@@ -1,0 +1,7 @@
+#blocks {
+    flex-direction: row;
+}
+#blocks .blockDisplay {
+    display: inline-block;
+    margin: 1rem;
+}
