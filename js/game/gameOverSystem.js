@@ -23,7 +23,7 @@ againButton.onmouseout = function() {
 againButton.onclick = function() {
     let mainState = document.getElementById("gameOverState");
     mainState.style.display = "none";
-    sec = 3*60;
+    sec = allTime;
     setUpGame();
 }
 
@@ -47,11 +47,11 @@ mainButton.onclick = function() {
     let gameOverState = document.getElementById("gameOverState");
     gameOverState.style.display = "none";
 
-    sec = 3*60;
+    sec = allTime;
 }
-
+let allTime = 30;
 let nowTime = new Date();
-let sec = 3*60;
+let sec = allTime;
 let time = document.getElementById("time");
 let timeLoop;
 
