@@ -29,7 +29,7 @@ function compress(bits) {
 }
 
 let shareButton = document.getElementById("share");
-let link = getShareLink();
+let name = "";
 
 function getShareLink(){
     let tile = getTileInfo();
@@ -44,7 +44,12 @@ function getShareLink(){
     blockInfo = encodeURIComponent(btoa(String.fromCharCode(...blockInfo)));
 
     let link = `share.html?tilemap=${tile}&score=${scores}&blocks=${blockInfo}`;
+    if(name !== ""){
+        link = `${link}&name=${name}`;
+    }
+
     if(nowMod === 1){
+        if(sec < 0) sec = 0;
         let min = (sec - sec%60)/60;
         let secc =  (sec - sec%1)%60;
         let time = `${min}:${secc}`;
@@ -56,17 +61,30 @@ function getShareLink(){
 }
 
 shareButton.onclick = () => {
-    let name = prompt("Name: ");
+    shareBg.style.display = "";
+}
+
+let shareBg = document.getElementById("shareBg");
+shareBg.onclick = function (e) {
+    if(e.target.id === "shareBg"){
+        shareBg.style.display = "none";
+    }
+}
+
+let shareFinalButton = document.getElementById("shareButton");
+let nameIn = document.getElementById("nameInput");
+shareFinalButton.onclick = () => {
+    name = nameIn.value;
     name = encodeURIComponent(btoa(encodeURIComponent(name)));
-    link = `${link}&name=${name}`;
     if(navigator.share){
         navigator.share({
             title: "Woodoku 점수 공유",
-            text: `${score}점`,
-            url: link
+            text: `Woodoku 점수: ${score}점`,
+            url: getShareLink()
         })
     }
     else {
-        window.open(link);
+        window.open(getShareLink());
     }
+    shareBg.style.display = "none";
 }

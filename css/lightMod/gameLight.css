@@ -42,3 +42,11 @@
 #share {
     background-color: white;
 }
+
+#shareButton:hover {
+    background-color: pink;
+}
+
+#shareButton:active {
+    background-color: deeppink;
+}
