@@ -56,6 +56,9 @@ function getShareLink(){
 }
 
 shareButton.onclick = () => {
+    let name = prompt("Name: ");
+    name = encodeURIComponent(btoa(encodeURIComponent(name)));
+    link = `${link}&name=${name}`;
     if(navigator.share){
         navigator.share({
             title: "Woodoku 점수 공유",

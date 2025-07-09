@@ -140,3 +140,13 @@ let title = document.getElementById("title");
 title.onclick = () => {
     location.href = "index.html";
 };
+
+let name = urlParms.get("name");
+if(name != null){
+    let nameH1 = document.getElementById("name");
+    name = decodeURIComponent(name);
+    name = atob(name);
+    name = decodeURIComponent(name);
+    nameH1.style.display = "";
+    nameH1.innerText = `${name}'s`;
+}
